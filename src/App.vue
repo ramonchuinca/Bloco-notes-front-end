@@ -3,5 +3,5 @@ import LoginView from './pages/LoginView.vue'
 </script>
 
 <template>
-  <LoginView />
+  <router-view />
 </template>

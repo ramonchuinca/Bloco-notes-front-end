@@ -14,40 +14,57 @@
           </div>
 
           <!-- Formulário -->
-          <form @submit.prevent="login">
-            <div class="mb-4">
-              <label class="mb-2 block">
-                Username
-              </label>
+    <form @submit.prevent="login" class="space-y-5">
 
-              <input
-                v-model="form.username"
-                type="text"
-                class="w-full rounded-md bg-slate-800 px-4 py-2 text-cyan-300 outline-none"
-                required
-              >
-            </div>
+  <!-- Username -->
+  <div>
+    <label
+      for="username"
+      class="mb-2 block text-sm font-medium text-slate-700"
+    >
+      Username
+    </label>
 
-            <div class="mb-6">
-              <label class="mb-2 block">
-                Password
-              </label>
+    <input
+      id="username"
+      v-model="form.username"
+      type="text"
+      autocomplete="username"
+      placeholder="Digite seu usuário"
+      class="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-cyan-300 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+      required
+    >
+  </div>
 
-              <input
-                v-model="form.password"
-                type="password"
-                class="w-full rounded-md bg-slate-800 px-4 py-2 text-cyan-300 outline-none"
-                required
-              >
-            </div>
+  <!-- Password -->
+  <div>
+    <label
+      for="password"
+      class="mb-2 block text-sm font-medium text-slate-700"
+    >
+      Password
+    </label>
 
-            <button
-              type="submit"
-              class="w-full rounded-md bg-slate-600 py-3 text-white transition hover:bg-slate-700"
-            >
-              LOGIN
-            </button>
-          </form>
+    <input
+      id="password"
+      v-model="form.password"
+      type="password"
+      autocomplete="current-password"
+      placeholder="Digite sua senha"
+      class="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-3 text-cyan-300 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30"
+      required
+    >
+  </div>
+
+  <!-- Botão -->
+  <button
+    type="submit"
+    class="w-full rounded-lg bg-slate-700 py-3 font-semibold text-white transition hover:bg-slate-800 active:scale-[0.99]"
+  >
+    LOGIN
+  </button>
+
+</form>
 
           <!-- Rodapé -->
           <div class="mt-6 text-center text-sm text-slate-500">
